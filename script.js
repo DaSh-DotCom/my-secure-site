@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const img = document.getElementById('meme');
-  const btn = document.getElementById('newMeme');
+  const img = document.getElementById('cursedpic');
+  const btn = document.getElementById('newCursed Pic');
   const pool = [
     '/images/freshchicken.jpeg',
     '/images/monke.jpeg',
