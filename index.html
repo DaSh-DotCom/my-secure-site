@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Secure Site</title>
+    <meta name="description" content="A minimal, hardened static site." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hello, world 👋</h1>
+      <p>This static site is locked down with strict security headers.</p>
+      <nav aria-label="primary">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/404.html">Test 404</a>
+      </nav>
+    </header>
+
+    <main>
+      <p>Try the button; it uses a same-origin script file.</p>
+      <button id="ping" type="button">Test JavaScript</button>
+      <p>
+        External links should always use 
+        <code>rel="noopener noreferrer"</code>:
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">Example</a>
+      </p>
+      <noscript>This site works without JavaScript, but some features are nicer with it.</noscript>
+    </main>
+
+    <footer>
+      <small>&copy; <span id="year"></span> You.</small>
+    </footer>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
