@@ -1,10 +1,27 @@
-// Keep JS minimal; avoid DOM injection. Use textContent, not innerHTML.
 document.addEventListener('DOMContentLoaded', () => {
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear().toString();
+  const img = document.getElementById('meme');
+  const btn = document.getElementById('newMeme');
+  const pool = [
+    '/images/freshchicken.jpeg',
+    '/images/monke.jpeg',
+    '/images/whatevenisthis.jpeg',
+    '/images/giveboinguslove.jpeg',
+    '/images/peaceandquiet.jpeg',
+    '/images/imdoneforthenight.jpeg',
+    '/images/shaq.jpeg',
+  ];
 
-  const btn = document.getElementById('ping');
-  if (btn) btn.addEventListener('click', () => {
-    alert('🎉 Your JS works, and CSP allows it because it is same-origin.');
-  });
+  function pick() {
+    const i = Math.floor(Math.random() * pool.length);
+    return pool[i];
+  }
+
+  async function loadMeme() {
+    // Cache-bust so you see changes during development
+    const url = pick() + `?t=${Date.now()}`;
+    img.src = url;
+  }
+
+  btn?.addEventListener('click', loadMeme);
+  loadMeme();
 });
