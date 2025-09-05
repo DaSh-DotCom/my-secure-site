@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     '/images/peaceandquiet.jpeg',
     '/images/imdoneforthenight.jpeg',
     '/images/shaq.jpeg',
+    '/images/tromp.jpg',
+    '/images/gustav.jpg',
+    '/images/rucky.jpg',
   ];
 
   function pick() {
